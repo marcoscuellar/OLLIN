@@ -8,17 +8,24 @@
 
 | File | What it is |
 |---|---|
-| [`ollin_final.html`](./ollin_final.html) | The parent landing page — a single self-contained HTML file (stacked-reveal scroll, product index, App-Store-style expand cards, color-cycling guide preview). |
+| [`index.html`](./index.html) | The parent landing page — a single self-contained HTML file (stacked-reveal scroll, product index, App-Store-style expand cards, color-cycling guide preview). |
+| [`vercel.json`](./vercel.json) | Vercel static-hosting config (clean URLs + basic security headers). No build step. |
 | [`OLLIN_BRIEF.md`](./OLLIN_BRIEF.md) | Brand & build brief — every decision made so far (positioning, naming, visual identity, palette, page structure, open TODOs). Read it before editing the site. |
 
 ## Running it
 
-No build step. Open `ollin_final.html` directly in a browser, or serve the folder:
+No build step. Open `index.html` directly in a browser, or serve the folder:
 
 ```bash
 python3 -m http.server 8000
-# then visit http://localhost:8000/ollin_final.html
+# then visit http://localhost:8000
 ```
+
+### Deploying to Vercel
+
+Import the repo in the Vercel dashboard (Framework Preset: **Other**; leave the
+build command and output directory empty — it's static HTML). The included
+`vercel.json` handles clean URLs and headers; `index.html` is served at `/`.
 
 ## The product family
 
