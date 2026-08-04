@@ -26,6 +26,30 @@ python3 -m http.server 8000
 Import the repo in the Vercel dashboard (Framework Preset: **Other**; leave the
 build command and output directory empty — it's static HTML). The included
 `vercel.json` handles clean URLs and headers; `index.html` is served at `/`.
+Every push to the connected branch auto-deploys, and each branch gets its own
+preview URL.
+
+### Custom domain (OllinOS.com)
+
+1. In the Vercel project: **Settings → Domains** → add `ollinos.com` **and**
+   `www.ollinos.com`. Pick one as primary and let Vercel redirect the other.
+2. At the registrar where OllinOS.com is registered, apply the DNS records
+   **exactly as Vercel displays them** (its IPs change, so don't hardcode).
+   Either point the nameservers to Vercel's (`ns1.vercel-dns.com` /
+   `ns2.vercel-dns.com`), or keep your DNS and add the shown A record for the
+   apex (`@`) plus a CNAME for `www` → `cname.vercel-dns.com`.
+3. Vercel auto-issues SSL once DNS resolves. The "Invalid Configuration"
+   warning clears itself when the records propagate.
+
+### Before pointing a live domain at it
+
+- **Set the waitlist endpoint.** Paste a form-service URL (e.g. Formspree)
+  into `const NOTIFY_ENDPOINT = ""` near the bottom of `index.html`. While it's
+  blank, the "Notify me" form previews the flow but **stores nothing** — real
+  signups are dropped. Each submission POSTs `{ email, product, source }`.
+- **Fonts are loaded externally** from Google Fonts (Poppins + Inter). Fine as
+  is; self-host them if you want zero third-party requests on the primary
+  domain.
 
 ## The product family
 
