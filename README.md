@@ -1,0 +1,50 @@
+# Ollin
+
+**Human + AI operating systems.** Ollin is the parent brand for a family of Human + AI software products — software that doesn't just store your work, it *moves it forward*.
+
+> *Ollin* — Nahuatl (Mexica) for **movement / momentum**; a day-sign in the Mexica calendar. Pronounced **/ˈol.lin/ — "OHL-leen."**
+
+## This repo
+
+| File | What it is |
+|---|---|
+| [`ollin_final.html`](./ollin_final.html) | The parent landing page — a single self-contained HTML file (stacked-reveal scroll, product index, App-Store-style expand cards, color-cycling guide preview). |
+| [`OLLIN_BRIEF.md`](./OLLIN_BRIEF.md) | Brand & build brief — every decision made so far (positioning, naming, visual identity, palette, page structure, open TODOs). Read it before editing the site. |
+
+## Running it
+
+No build step. Open `ollin_final.html` directly in a browser, or serve the folder:
+
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000/ollin_final.html
+```
+
+## The product family
+
+Everything under the parent reads **"Ollin : ___"**.
+
+| Product | One-liner |
+|---|---|
+| **Ollin : Sales** | The prospecting revenue engine — signal to sent. |
+| **Ollin : Vamos** | The tracker — keeps everything moving. |
+| **Ollin : Hire** | AI-matched recruiting ("OHMatrix"). |
+| **Ollin : MiCasa** | The memory/context layer — the home that holds what's in motion. |
+| **Ollin : Constant** | Accountability coach — keeps follow-through on track. |
+| **Ollin : TuCasa** | Job board — roles direct to job seekers. |
+| **Ollin : Muul** | Content growth — turn what you know into content. |
+| **Ollin : Pixchui** | Cybersecurity watcher (monitoring). |
+| **Ollin : Nel** | Testing buddy ("Nel" = truth in MX slang). |
+
+## Design principles
+
+- **Monochrome parent, colorful children** — never color the parent chrome; accent color comes from each sub-brand.
+- **Respectful homage** — Mexica/Nahuatl heritage carried into the modern AI age. Prefer "Mexica" over "Aztec"; keep every cultural claim accurate. No gold.
+- **Type** — Poppins (display/wordmark), Inter (body/UI).
+- **The guide** — one gender-neutral AI companion ("Ask your Tío / Tía…") across every product; no cross-tool memory claims.
+
+See [`OLLIN_BRIEF.md`](./OLLIN_BRIEF.md) §7 for open decisions still to be made.
+
+---
+
+© 2026 Ollin Systems · *Ollin* (Nahuatl) — movement
