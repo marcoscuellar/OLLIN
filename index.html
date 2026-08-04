@@ -95,6 +95,13 @@
   @media (hover:none){
     .row .desc{max-height:40px;opacity:1;margin-top:2px;}
   }
+  /* phones: the product list is taller than one screen, so let this panel grow
+     and scroll normally instead of locking to a single screenful (which clipped it) */
+  @media (max-width:640px){
+    .list-panel{position:relative;min-height:100dvh;justify-content:flex-start;padding-top:64px;padding-bottom:72px;}
+    .list-panel .aura{position:absolute;top:0;height:100%;}
+    .row{padding:14px 0;}
+  }
   .foot-base{position:absolute;bottom:26px;left:0;right:0;display:flex;justify-content:space-between;padding:0 40px;color:#46434d;font-size:12px;}
   .foot-base em{font-style:italic;}
 
