@@ -88,15 +88,12 @@
   .row .name .n{color:var(--dim);font-size:.5em;vertical-align:middle;margin-right:.5em;font-weight:500;transition:color .3s;}
   .row .name em{font-style:normal;color:var(--dim);transition:color .3s;}
   .row .desc{color:var(--dim);font-size:13.5px;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.8,.2,1),opacity .4s ease;}
-  .row:hover .name{color:var(--ac,var(--cream));letter-spacing:0;}
-  .row:hover .name em,.row:hover .name .n{color:var(--ac,var(--cream));}
+  .row:hover .name{color:var(--cream);letter-spacing:0;}
+  .row:hover .name em,.row:hover .name .n{color:var(--dim);}
   .row:hover .desc{max-height:40px;opacity:1;}
-  /* touch devices have no hover — reveal descriptions + accent color by default */
+  /* touch devices have no hover — show the one-liner, but keep names monochrome (no accent) */
   @media (hover:none){
     .row .desc{max-height:40px;opacity:1;margin-top:2px;}
-    .row .name{color:var(--ac,var(--cream));}
-    .row .name em,.row .name .n{color:var(--ac,var(--cream));}
-    .row::before{opacity:.55;}
   }
   .foot-base{position:absolute;bottom:26px;left:0;right:0;display:flex;justify-content:space-between;padding:0 40px;color:#46434d;font-size:12px;}
   .foot-base em{font-style:italic;}
